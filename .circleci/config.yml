@@ -23,11 +23,11 @@ jobs:
       - run: npm run analyze-bundle
 workflows:
   deployment:
-    -run-build
-    -run-test:
+    - run-build
+    - run-test:
         requires:
           - run-build
-    -run-analysis:
+    - run-analysis:
         requires:
           - run-test
     
